@@ -9,3 +9,4 @@ ingredient2 = Ingredient.create(name: "eggs", calories: 2)
 
 # meal_ingredient1 = MealIngredient.create(meal_id: 1, ingredient_id: 1)
 # meal_ingredient2 = MealIngredient.create(meal_id: 2, ingredient_id: 2)
+# lol
