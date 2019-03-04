@@ -1,0 +1,8 @@
+<h1>Enter a new User</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit%>
+
+<% end %>

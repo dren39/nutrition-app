@@ -1,0 +1,10 @@
+<h1>Enter a new Ingredient here</h1>
+
+<%= form_for @ingredient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :calories %>
+  <%= f.number_field :calories %>
+  <%= f.submit%>
+
+<% end %>
