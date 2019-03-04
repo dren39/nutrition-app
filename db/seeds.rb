@@ -1,8 +1,8 @@
 user1 = User.create(name: "david")
 user2 = User.create(name: "camille")
 
-meal1 = Meal.create(name: "French Toast", meal_type: "Breakfast")
-meal2 = Meal.create(name: "Scrambled eggs", meal_type: "Lunch")
+meal1 = Meal.create(name: "French Toast", meal_type: "Breakfast", user_id: 1)
+meal2 = Meal.create(name: "Scrambled eggs", meal_type: "Lunch", user_id: 2)
 
 ingredient1 = Ingredient.create(name: "bread", calories: 5)
 ingredient2 = Ingredient.create(name: "eggs", calories: 2)
