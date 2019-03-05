@@ -1,7 +1,8 @@
 <h1>All Ingredients</h1>
 ​
 <%= button_to "View Meals", meals_path, method: :get%>
-​
+​<%= button_to "My profile", user_path(current_user), method: :get%>
+
 <h2>Search for an ingredient</h2>
 <%= form_tag(ingredients_path, method: :get) do %>
  <%= text_field_tag :search, params[:search] %>

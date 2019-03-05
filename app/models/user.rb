@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :meals
-  
+  has_many :user_meals
+  has_many :meals, through: :user_meals
+
   def active_days
     self.meals.map do |meal|
       meal.created_at
