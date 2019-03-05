@@ -1,3 +1,13 @@
 <h1><%= @meal.name %></h1>
-
+<%= button_to "View Meals", ingredients_path, method: :get%>
+<h2>Ingredients:</h2>
+<ul>
+  <%@ingredients.each do |ingredient| %>
+    <li><%= link_to ingredient.name, ingredient %>, calories: <%= ingredient.calories %></li>
+  <% end %>
+</ul>
+<h2>Nutritional value:</h2>
+<ul>
+  <li>Calories: <%= @meal.calory_calculator %></li>
+</ul>
 <%= button_to "delete", @meal, :method => :delete %>

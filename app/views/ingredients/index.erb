@@ -1,5 +1,17 @@
 <h1>All Ingredients</h1>
-
+​
+<%= button_to "View Meals", meals_path, method: :get%>
+​
+<h2>Search for an ingredient</h2>
+<%= form_tag(ingredients_path, method: :get) do %>
+ <%= text_field_tag :search, params[:search] %>
+ <%= submit_tag 'Search' %>
+<% end %>
+​
+​
 <% @ingredients.each do |ingredient| %>
-  <li><%= link_to ingredient.name, ingredient %></li>
+ <li><%= link_to ingredient.name.capitalize, ingredient %></li>
+ <p>Found in: <% ingredient.meals.each do |meal| %></p>
+  <p><%= link_to meal.name, meal %></p>
+ <% end %>
 <% end %>

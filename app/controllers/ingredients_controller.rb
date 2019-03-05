@@ -1,6 +1,15 @@
 class IngredientsController < ApplicationController
   def index
+   if params[:search] == nil
     @ingredients = Ingredient.all
+   elsif params[:search] == ""
+    @ingredients = Ingredient.all
+   elsif params[:search][0] != ""
+    ingredient_list = Ingredient.all
+    @ingredients = Ingredient.search_results(params[:search], ingredient_list)
+   else
+    @ingredients = Meal.where(name: params[:search])
+   end
   end
 
   def show
